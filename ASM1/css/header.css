@@ -1,0 +1,174 @@
+/* Header bao phủ toàn chiều ngang */
+.header {
+    width: 100%; /* thêm dòng này để full width */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 15px 30px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; /* Thêm để tránh overflow */
+}
+.extra {
+    display: flex;
+    gap: 15px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.extra span:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    flex-shrink: 0; /* Không cho logo co lại */
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    transition: width 0.3s ease;
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+/* Menu */
+nav {
+    flex-shrink: 1; /* Cho phép nav co lại khi cần */
+    overflow: hidden; /* Ẩn phần tràn */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Giảm gap từ 30px xuống 20px */
+    flex-wrap: nowrap;
+}
+
+nav li {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 12px; /* Giảm padding từ 15px xuống 12px */
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap; /* Không cho text xuống dòng */
+    flex-shrink: 0; /* Không cho li co lại */
+}
+
+nav li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+    transition: left 0.3s ease;
+}
+
+nav li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav li:hover::before {
+    left: 100%;
+}
+
+nav li:active {
+    transform: translateY(0);
+}
+
+/* Responsive Menu */
+@media (max-width: 1024px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav li {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    
+    nav {
+        width: 100%;
+        overflow: visible;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    nav li {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+    
+    nav li {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+}

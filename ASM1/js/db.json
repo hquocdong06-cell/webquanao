@@ -1,0 +1,170 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Áo",
+      "parent_id": null,
+      "image": "img/ao1.png"
+    },
+    {
+      "id": "2",
+      "name": "Quần",
+      "parent_id": null,
+      "image": "img/maunam.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Váy",
+      "parent_id": null,
+      "image": "img/vaymau1.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Giày",
+      "parent_id": null,
+      "image": "img/giay3.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Áo thun",
+      "parent_id": 1,
+      "image": "img/polova7.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Áo sơ mi",
+      "parent_id": 1,
+      "image": "img/aosominam.jpg"
+    }
+  ],
+  "products": [
+    {
+      "name": "Áo thun nam basic",
+      "cate_id": 5,
+      "price": 150000,
+      "detail": "Chất cotton thoáng mát",
+      "image": "img/ao1.png",
+      "id": "1"
+    },
+    {
+      "name": "Áo sơ mi nữ công sở",
+      "cate_id": 6,
+      "price": 200000,
+      "detail": "Vải lụa mềm mịn, sang trọng",
+      "image": "img/aocongsonu.jpg",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "Quần jeans nam slimfit",
+      "cate_id": 2,
+      "price": 150000,
+      "detail": "Jeans co giãn, phong cách trẻ trung",
+      "image": "img/quanjeam.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Váy hoa mùa hè",
+      "cate_id": 3,
+      "price": 150000,
+      "detail": "Thiết kế trẻ trung, nữ tính",
+      "image": "img/tb1.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Giày sneaker trắng",
+      "cate_id": 4,
+      "price": 150000,
+      "detail": "Sneaker unisex, dễ phối đồ",
+      "image": "img/giay1.jpg"
+    }
+  ],
+  "product_variants": [
+    {
+      "id": "1",
+      "product_id": 1,
+      "variant_name": "Màu đen - Size M",
+      "price": 150000,
+      "quantity": 20,
+      "image": "aothun_den_m.jpg"
+    },
+    {
+      "id": "2",
+      "product_id": 1,
+      "variant_name": "Màu trắng - Size L",
+      "price": 150000,
+      "quantity": 15,
+      "image": "aothun_trang_l.jpg"
+    },
+    {
+      "id": "3",
+      "product_id": 2,
+      "variant_name": "Màu xanh - Size S",
+      "price": 250000,
+      "quantity": 10,
+      "image": "aosomi_xanh_s.jpg"
+    },
+    {
+      "id": "4",
+      "product_id": 3,
+      "variant_name": "Xanh đậm - Size 32",
+      "price": 350000,
+      "quantity": 8,
+      "image": "jeans_xanh32.jpg"
+    },
+    {
+      "id": "5",
+      "product_id": 5,
+      "variant_name": "Trắng - Size 42",
+      "price": 500000,
+      "quantity": 12,
+      "image": "sneaker_trang42.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Nguyễn Văn A",
+      "email": "a@gmail.com",
+      "phone": "0901234567",
+      "address": "Hà Nội"
+    },
+    {
+      "id": "2",
+      "name": "Trần Thị B",
+      "email": "b@gmail.com",
+      "phone": "0912345678",
+      "address": "TP.HCM"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "user_id": 1,
+      "created_date": "2025-10-03",
+      "status": "Đang xử lý"
+    },
+    {
+      "id": "2",
+      "user_id": 2,
+      "created_date": "2025-10-02",
+      "status": "Hoàn thành"
+    }
+  ],
+  "order_details": [
+    {
+      "id": "1",
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 2,
+      "unit_price": 150000
+    },
+    {
+      "id": "2",
+      "order_id": 2,
+      "product_id": 5,
+      "quantity": 1,
+      "unit_price": 500000
+    }
+  ]
+}
